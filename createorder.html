@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>TRANSPORT OWL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="ibis.css" type="text/css" rel="stylesheet">
+ </head>
+
+ <body>
+  <div id="container">
+   <nav id="header" class="navbar">
+     <img src="OWL_design1.png" alt="transportowl">
+     <ul class="navlist">
+       <li><a href="ibis.html">HOME</a></li>
+       <li><a href="aboutus.html">ABOUT</a></li>
+       <li><a href="contactus.html">CONTACT US</a></li>
+       <li><a href="signup.html">SIGN UP</a></li>
+       <li><a href="yourprofile2.html">PROFILE</a></li>
+       <li><a class="button1" id="navbutton" href="#">QUICK QUOTE</a></li>
+     </ul>
+   </nav>
+
+
+
+
+   <div id="body" class="maincontainer">
+     <div class="sidenav">
+       <a href="orders.html">Orders</a>
+       <a href="shipments.html">Shipments</a>
+       <a href="dispatches.html">Dispatches</a>
+       <button class="dropdown-btn">MacroView
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-container">
+         <a href="inbounds.html">Inbounds</a>
+         <a href="outbounds.html">Outbounds</a>
+         <a href="warehouses.html">Warehouses</a>
+       </div>
+       <a href="analytics.html">Analytics</a>
+       <a href="locations.html">Locations</a>
+       <a href="carriers.html">Carriers</a>
+       <button class="dropdown-btn">Admin
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-container">
+         <a href="employees.html">Employees</a>
+         <a href="equipiment.html">Equipment</a>
+         <a href="accountspay.html">Accounts Pay</a>
+         <a href="accountsrec.html">Accounts Rec</a>
+     </div>
+
+  </div>
+
+    <div class="mainarticle2">
+        <div class="neworder"><a class="button2" id="navbutton" href="createorder.html">Create Order</a>
+          </div>
+
+
+          <h2>New Order</h2>
+
+              <div class="">
+                <fieldset>
+                  <legend>PICKUP DETAILS</legend>
+                  <br />
+
+                  <label>Pickup Facility Name:
+                    <input type="text" name="pufacname" size="30" maxlength="100"/>
+                  </label>
+                  <br />
+                  <br />
+                  <label>Street Address
+                    <input type="text" name="puaddress" size="30" maxlength="100"/>
+                  </label>
+                  <br />
+                  <br />
+                  <label>City:
+                    <input type="text" name="pucity" size="30" maxlength="100"/>
+                  </label>
+                  <br />
+                  <br />
+                  <label>State:
+                    <input type="text" name="pustate" size="4" maxlength="2"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Zip:
+                    <input type="text" name="puzip" size="10" maxlength="10"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Phone:
+                    <input type="text" name="puphone" size="30" maxlength="100"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Email:
+                    <input type="text" name="puemail" size="30" maxlength="100"
+                  </label>
+                  <br />
+                  <br />
+                </fieldset>
+                <br />
+                <br />
+
+                <div class="freightdetails">
+                  <fieldset>
+                    <legend>FREIGHT DETAILS</legend>
+                    <br />
+                    <label>Quantity:
+                      <input type="text" name="unittype" size="20" maxlength="100"/>
+                    </label>
+                    <br />
+                    <br />
+                    <label>Unit Type (Pallets, Cases, MODs):
+                      <input type="text" name="unittype" size="20" maxlength="100"/>
+                    </label>
+                    <br />
+                    <br />
+                    <label>Total Weight (lbs.):
+                      <input type="text" name="weight" size="20" maxlength="100"/>
+                    </label>
+                    <br />
+                    <br />
+                    <label>Trailer Type:
+                      <input type="text" name="trailertype" size="20" maxlength="100"
+                    </label>
+                    <br />
+                    <br />
+                    <label>Temperature:
+                      <input type="text" name="temp" size="20" maxlength="100"
+                    </label>
+                    <br />
+                    <br />
+                    <label>Load Size (FTL, LTL, Partial):
+                      <input type="text" name="loadsize" size="20" maxlength="100"
+                    </label>
+                    <br />
+                    <br />
+                  </fieldset>
+                  <br />
+                  <button id="addpu">ADD PICKUP</button>
+                  <br />
+                  <br />
+
+                <fieldset>
+                  <legend>DELIVERY DETAILS</legend>
+                  <br />
+
+                  <label>Delivery Facility Name:
+                    <input type="text" name="delfacname" size="30" maxlength="100"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Street Address
+                    <input type="text" name="deladdress" size="30" maxlength="100"/>
+                  </label>
+                  <br />
+                  <br />
+                  <label>City:
+                    <input type="text" name="delcity" size="30" maxlength="100"/>
+                  </label>
+                  <br />
+                  <br />
+                  <label>State:
+                    <input type="text" name="delstate" size="4" maxlength="2"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Zip:
+                    <input type="text" name="delzip" size="10" maxlength="10"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Phone:
+                    <input type="text" name="delphone" size="30" maxlength="100"
+                  </label>
+                  <br />
+                  <br />
+                  <label>Email:
+                    <input type="text" name="delemail" size="30" maxlength="100"
+                  </label>
+                  <br />
+                </fieldset>
+                <br />
+                <button id="add.delivery">ADD DELIVERY</button>
+                <br />
+                <br />
+
+            <button id="submit">SUBMIT</button>
+                <br />
+                <br />
+              </div>
+
+
+
+
+
+
+
+
+
+     </div>
+    
+
+     <div id="footer" class="navfooter">
+       <div class="copyright">Copyright Website by DG
+         </div>
+
+           <ul class="footernav-items">
+             <li class="footernav-item"><a href="#">Lorem</a></li>
+             <li class="footernav-item"><a href="#">Ipsum</a></li>
+             <li class="footernav-item"><a href="#">Magna</a></li>
+           </ul>
+     </div>
+
+   </div>
+
+  </body>
+</html>
