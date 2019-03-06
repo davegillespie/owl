@@ -15,6 +15,69 @@ body {
 }
 
 
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #4bcdfc;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+
 .navbar {
   background-color: #bbb;
   margin: 5px;
@@ -102,14 +165,19 @@ p {
 
 .maincontainer {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  /* align-items: flex-start;
+  flex-wrap: wrap; */
   /* border-color: black; */
   padding: 5px;
 }
 
 .mainarticle2 {
   width: 85%;
-  height: 600px;
+  /* height: 600px; */
+  margin-left: 10px;
+  height: auto;
+  padding: 10px;
   border-style: solid;
   border-width: 5px;
   border-color: #bbb;
@@ -119,52 +187,52 @@ p {
 .neworder {
   padding-top: 20px;
   padding-left: 15px;
-}
-
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 400px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
   width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+
+
+/* .entireorder {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+} */
+
+.pickuponly {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.freightonly {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.deliveryonly {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Style the back side */
-.flip-card-back {
+.addbutton {
+  margin: 10px;
+  padding: 10px;
   background-color: #4bcdfc;
-  color: white;
-  transform: rotateY(180deg);
+  color: #f9fafc;
+  clear: both;
+}
+
+.addbutton:hover {
+  background-color: #bbb;
+  color: #000;
+}
+
+
+.submitorder {
+
 }
 
 
@@ -176,17 +244,15 @@ p {
 }
 
 
-
-
-
-
-
 .navfooter {
   margin: 5px;
   padding: 3px;
   display: flex;
   justify-content: space-between;
   background-color: #bbb;
+  /* position: absolute; */
+  width: 100%;
+  bottom: 0;
 }
 
 .copyright {
@@ -198,25 +264,19 @@ p {
 }
 
 
-#container {
-   min-height:100%;
-   position:relative;
+.container {
+   min-height: 100%;
+   position: relative;
 }
-#header {
+/* #header {
    padding:10px;
 }
 #body {
    padding:5px;
-   /* padding-bottom:60px;   /* Height of the footer */ */
-}
+ } */
+   /* padding-bottom:60px;   /* Height of the footer */
 
-#footer {
-   position: absolute;
-   /* bottom:0; */
-   width:100%;
-   /* height:60px;   /* Height of the footer */ */
-   /* background:#6cf; */
-}
+
 
 .footernav-items {
   margin: 5px;
@@ -239,7 +299,6 @@ p {
 .sidenav {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 200px;
   /* position: fixed; */
   /* z-index: 1; */

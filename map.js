@@ -12,17 +12,41 @@ function initMap() {
   });
 }
 
+// function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+//   var waypts = [];
+//   var checkboxArray = document.getElementById('waypoints');
+//   for (var i = 0; i < checkboxArray.length; i++) {
+//     if (checkboxArray.options[i].selected) {
+//       waypts.push({
+//         location: checkboxArray[i].value,
+//         stopover: true
+//       });
+//     }
+//   }
+
+// for (var i = 0; i < checkboxArray.length; i++) {
+//   var address = checkboxArray[i].value;
+//   if (address !== '') {
+//     waypts.push({
+//       location: address,
+//       stopover: true
+//     });
+//   }
+// }
+
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var waypts = [];
-  var checkboxArray = document.getElementById('waypoints');
+  var checkboxArray = document.getElementsByClassName('waypoints');
   for (var i = 0; i < checkboxArray.length; i++) {
-    if (checkboxArray.options[i].selected) {
+    var address = checkboxArray[i].value;
+    if (address !== '') {
       waypts.push({
-        location: checkboxArray[i].value,
+        location: address,
         stopover: true
       });
     }
   }
+
 
   directionsService.route({
     origin: document.getElementById('start').value,
@@ -50,3 +74,5 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }
   });
 }
+
+// directionsDisplay.directions.routes[0].legs[0].distance.text

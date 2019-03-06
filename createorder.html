@@ -8,7 +8,8 @@
  </head>
 
  <body>
-  <div id="container">
+  <div id="container" class="container">
+
    <nav id="header" class="navbar">
      <img src="OWL_design1.png" alt="transportowl">
      <ul class="navlist">
@@ -24,197 +25,121 @@
 
 
 
-   <div id="body" class="maincontainer">
-     <div class="sidenav">
-       <a href="orders.html">Orders</a>
-       <a href="shipments.html">Shipments</a>
-       <a href="dispatches.html">Dispatches</a>
-       <button class="dropdown-btn">MacroView
-         <i class="fa fa-caret-down"></i>
-       </button>
-       <div class="dropdown-container">
-         <a href="inbounds.html">Inbounds</a>
-         <a href="outbounds.html">Outbounds</a>
-         <a href="warehouses.html">Warehouses</a>
-       </div>
-       <a href="analytics.html">Analytics</a>
-       <a href="locations.html">Locations</a>
-       <a href="carriers.html">Carriers</a>
-       <button class="dropdown-btn">Admin
-         <i class="fa fa-caret-down"></i>
-       </button>
-       <div class="dropdown-container">
-         <a href="employees.html">Employees</a>
-         <a href="equipiment.html">Equipment</a>
-         <a href="accountspay.html">Accounts Pay</a>
-         <a href="accountsrec.html">Accounts Rec</a>
-     </div>
+   <div id="main" class="maincontainer">
 
-  </div>
+       <div class="sidenav">
+         <a href="orders.html">Orders</a>
+         <a href="shipments.html">Shipments</a>
+         <a href="dispatches.html">Dispatches</a>
+         <button class="dropdown-btn">MacroView
+           <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+           <a href="inbounds.html">Inbounds</a>
+           <a href="outbounds.html">Outbounds</a>
+           <a href="warehouses.html">Warehouses</a>
+         </div>
+         <a href="analytics.html">Analytics</a>
+         <a href="locations.html">Locations</a>
+         <a href="carriers.html">Carriers</a>
+         <button class="dropdown-btn">Admin
+           <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+           <a href="employees.html">Employees</a>
+           <a href="equipiment.html">Equipment</a>
+           <a href="accountspay.html">Accounts Pay</a>
+           <a href="accountsrec.html">Accounts Rec</a>
+         </div>
+       </div>  <!-- sidenave  -->
 
     <div class="mainarticle2">
         <div class="neworder"><a class="button2" id="navbutton" href="createorder.html">Create Order</a>
           </div>
 
+      <h2>New Order:</h2>
+        <div class="entireorder">
 
-          <h2>New Order</h2>
+          <h4>PICKUP DETAILS:</h4>
+        <div class="pickupdetails" id="pickupDetails">   <!-- encompasses pickup and delivery details with button -->
 
-              <div class="">
-                <fieldset>
-                  <legend>PICKUP DETAILS</legend>
-                  <br />
+          <div class="pickuponly">
 
-                  <label>Pickup Facility Name:
-                    <input type="text" name="pufacname" size="30" maxlength="100"/>
-                  </label>
-                  <br />
-                  <br />
-                  <label>Street Address
-                    <input type="text" name="puaddress" size="30" maxlength="100"/>
-                  </label>
-                  <br />
-                  <br />
-                  <label>City:
-                    <input type="text" name="pucity" size="30" maxlength="100"/>
-                  </label>
-                  <br />
-                  <br />
-                  <label>State:
-                    <input type="text" name="pustate" size="4" maxlength="2"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Zip:
-                    <input type="text" name="puzip" size="10" maxlength="10"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Phone:
-                    <input type="text" name="puphone" size="30" maxlength="100"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Email:
-                    <input type="text" name="puemail" size="30" maxlength="100"
-                  </label>
-                  <br />
-                  <br />
-                </fieldset>
-                <br />
-                <br />
+                <input type="text" name="pufacname" placeholder="Pickup Facility Name" size="30" maxlength="100"/>
 
-                <div class="freightdetails">
-                  <fieldset>
-                    <legend>FREIGHT DETAILS</legend>
-                    <br />
-                    <label>Quantity:
-                      <input type="text" name="unittype" size="20" maxlength="100"/>
-                    </label>
-                    <br />
-                    <br />
-                    <label>Unit Type (Pallets, Cases, MODs):
-                      <input type="text" name="unittype" size="20" maxlength="100"/>
-                    </label>
-                    <br />
-                    <br />
-                    <label>Total Weight (lbs.):
-                      <input type="text" name="weight" size="20" maxlength="100"/>
-                    </label>
-                    <br />
-                    <br />
-                    <label>Trailer Type:
-                      <input type="text" name="trailertype" size="20" maxlength="100"
-                    </label>
-                    <br />
-                    <br />
-                    <label>Temperature:
-                      <input type="text" name="temp" size="20" maxlength="100"
-                    </label>
-                    <br />
-                    <br />
-                    <label>Load Size (FTL, LTL, Partial):
-                      <input type="text" name="loadsize" size="20" maxlength="100"
-                    </label>
-                    <br />
-                    <br />
-                  </fieldset>
-                  <br />
-                  <button id="addpu">ADD PICKUP</button>
-                  <br />
-                  <br />
+                <input type="text" name="puaddress" placeholder="Street Address" size="30" maxlength="100"/>
 
-                <fieldset>
-                  <legend>DELIVERY DETAILS</legend>
-                  <br />
+                <input type="text" name="pucity" placeholder="City" size="30" maxlength="100"/>
 
-                  <label>Delivery Facility Name:
-                    <input type="text" name="delfacname" size="30" maxlength="100"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Street Address
-                    <input type="text" name="deladdress" size="30" maxlength="100"/>
-                  </label>
-                  <br />
-                  <br />
-                  <label>City:
-                    <input type="text" name="delcity" size="30" maxlength="100"/>
-                  </label>
-                  <br />
-                  <br />
-                  <label>State:
-                    <input type="text" name="delstate" size="4" maxlength="2"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Zip:
-                    <input type="text" name="delzip" size="10" maxlength="10"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Phone:
-                    <input type="text" name="delphone" size="30" maxlength="100"
-                  </label>
-                  <br />
-                  <br />
-                  <label>Email:
-                    <input type="text" name="delemail" size="30" maxlength="100"
-                  </label>
-                  <br />
-                </fieldset>
-                <br />
-                <button id="add.delivery">ADD DELIVERY</button>
-                <br />
-                <br />
+                <input type="text" name="pustate" placeholder="State" size="4" maxlength="2"/>
 
-            <button id="submit">SUBMIT</button>
-                <br />
-                <br />
+                <input type="text" name="puzip" placeholder="Zip" size="10" maxlength="10"/>
+
+                <input type="text" name="puphone" placeholder="Phone" size="30" maxlength="100"/>
+
+                <input type="text" name="puemail" placeholder="Email" size="30" maxlength="100"/>
+            </div>
+
+
+          <h4>FREIGHT DETAILS:</h4>
+            <div class="freightdetails">
+              <div class="freightonly">
+
+                <input type="text" name="unittype" placeholder="Quantity" size="20" maxlength="100"/>
+
+                <input type="text" name="unittype" placeholder="Unit Type (Pallets, Cases, MODs)" size="20" maxlength="100"/>
+
+                <input type="text" name="weight" placeholder="Total Weight (lbs.)" size="20" maxlength="100"/>
+
+                <input type="text" name="trailertype" placeholder="Trailer Type" size="20" maxlength="100"/>
+
+                <input type="text" name="temp" placeholder="Temperature" size="20" maxlength="100"/>
+
+                <input type="text" name="loadsize" placeholder="FTL, LTL, Partial" size="20" maxlength="100"/>
               </div>
 
+            <button class="addbutton" id="addpu" onclick="addPu();">ADD PICKUP</button>
+          </div>
+        </div>
+          <!-- <div id="space"/> -->
 
+            <h4>DELIVERY DETAILS:</h4>
+             <div class="deliverydetails">
+               <div class="deliveryonly">
+                <input type="text" name="delfacname" placeholder="Delivery Facility Name" size="30" maxlength="100"/>
 
+                <input type="text" name="deladdress" placeholder="Street Address" size="30" maxlength="100"/>
 
+                <input type="text" name="pucity" placeholder="City" size="30" maxlength="100"/>
 
+                <input type="text" name="pustate" placeholder="State" size="4" maxlength="2"/>
 
+                <input type="text" name="puzip" placeholder="Zip" size="10" maxlength="10"/>
 
+                <input type="text" name="puphone" placeholder="Phone" size="30" maxlength="100"/>
 
+                <input type="text" name="puemail" placeholder="Email" size="30" maxlength="100"/>
 
-     </div>
-    
+               </div>
+              <button class="addbutton" id="add.delivery">ADD DELIVERY</button>
+            </div>
+          </div> <!-- entireorder -->
+        <button class="submitorder" id="submit">SUBMIT</button>
 
-     <div id="footer" class="navfooter">
-       <div class="copyright">Copyright Website by DG
-         </div>
+       </div> <!-- mainarticle2 -->
+     </div> <!-- maincontainer -->
 
-           <ul class="footernav-items">
-             <li class="footernav-item"><a href="#">Lorem</a></li>
-             <li class="footernav-item"><a href="#">Ipsum</a></li>
-             <li class="footernav-item"><a href="#">Magna</a></li>
-           </ul>
-     </div>
+   <div id="footer" class="navfooter">
+     <div class="copyright">Copyright Website by DG
+       </div>
 
-   </div>
-
+         <ul class="footernav-items">
+           <li class="footernav-item"><a href="#">Lorem</a></li>
+           <li class="footernav-item"><a href="#">Ipsum</a></li>
+           <li class="footernav-item"><a href="#">Magna</a></li>
+         </ul>
+    </div> <!-- footer -->
+ </div> <!-- container: (navbar, mainarticle2, footer)-->
+    <script src="createorder.js"></script>
   </body>
 </html>
